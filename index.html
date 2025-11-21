@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory GameApp by Isma</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <div class="branding">Memory GameApp by Isma</div>
+        
+        <div class="scoreboard">
+            <div class="score-item">
+                <span class="score-value" id="score">0</span>
+                <span class="score-label">Score</span>
+            </div>
+            <div class="score-item">
+                <span class="score-value" id="round">0</span>
+                <span class="score-label">Round</span>
+            </div>
+            <div class="score-item">
+                <span class="score-value" id="best">0</span>
+                <span class="score-label">Best</span>
+            </div>
+        </div>
+
+        <main class="game-container">
+            <div class="game-board">
+                <div class="tile" data-color="0">
+                    <div class="tile-inner"></div>
+                </div>
+                <div class="tile" data-color="1">
+                    <div class="tile-inner"></div>
+                </div>
+                <div class="tile" data-color="2">
+                    <div class="tile-inner"></div>
+                </div>
+                <div class="tile" data-color="3">
+                    <div class="tile-inner"></div>
+                </div>
+            </div>
+
+            <div class="info-panel">
+                <p class="status-text" id="statusText">Watch the pattern and repeat it</p>
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                </div>
+            </div>
+
+            <div class="controls">
+                <button class="btn btn-primary" id="startBtn">Start Game</button>
+                <button class="btn btn-secondary" id="resetBtn">Reset</button>
+            </div>
+        </main>
+
+        <div class="modal" id="modal">
+            <div class="modal-content">
+                <h2 id="modalTitle">Memory GameApp</h2>
+                <p id="modalMessage">Watch the sequence of colors, then repeat them in the same order. Each round adds a new color!</p>
+                <button class="btn btn-primary btn-large" id="modalBtn">Start Playing</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="game.js"></script>
+</body>
+</html>
